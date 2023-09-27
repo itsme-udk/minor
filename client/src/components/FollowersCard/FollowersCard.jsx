@@ -28,12 +28,6 @@ const FollowersCard = ({ location }) => {
         if (person._id !== user._id) return <User person={person} key={id} />;
       })}
       </div>
-      
-
-      <FollowersModal
-        modalOpened={modalOpened}
-        setModalOpened={setModalOpened}
-      />
     </div>
   );
 };

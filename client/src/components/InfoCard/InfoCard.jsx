@@ -60,21 +60,21 @@ const InfoCard = () => {
       <div className="info">
         {/* */}
         <span>
-          <b>Status </b>
+          <b>College</b>
         </span>
-        <span>{profileUser.relationship}</span>
+        <span>{profileUser.college}</span>
       </div>
       <div className="info">
         <span>
-          <b>Lives in </b>
+          <b>Year</b>
         </span>
-        <span>{profileUser.livesIn}</span>
+        <span>{profileUser.year}</span>
       </div>
       <div className="info">
         <span>
-          <b>Works at </b>
+          <b>Tags</b>
         </span>
-        <span>{profileUser.worksAt}</span>
+        <span>{profileUser.tags}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogOut}>Log Out</button>

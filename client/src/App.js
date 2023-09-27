@@ -19,14 +19,14 @@ function App() {
             : "auto",
       }}
     >
-      <div className="Navbar">
-        <div>
-          <img  className="Logoicon" src={Logo}/>
+      {user && (
+        <div className="Navbar">
+          <img className="Logoicon" src={Logo} alt="Logo" />
+          <ul className="NavIcon-cont">
+            <NavIcons />
+          </ul>
         </div>
-        <div className="NavIcon-cont">
-          <NavIcons/>
-        </div>
-      </div>
+      )}
       <Routes>
         <Route
           path="/"

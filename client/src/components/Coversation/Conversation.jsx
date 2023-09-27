@@ -27,7 +27,7 @@ const Conversation = ({ data, currentUser, online }) => {
   }, [])
   return (
     <>
-      <div className="follower_load conversation">
+      <div className="follower_loader conversation">
         <div>
           {online && <div className="online-dot"></div>}
           <img

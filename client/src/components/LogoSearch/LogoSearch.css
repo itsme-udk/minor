@@ -14,12 +14,13 @@
 }
 .s-icon {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items:center;
+  justify-content:end;
   background: var(--buttonBg);
   border-radius: 5px;
   padding: 4px;
   color: white;
+  margin-left: 135px;
 }
 
 

@@ -13,7 +13,10 @@
   justify-content: center;
 }
 
-
+.Logos{
+  height: 50px;
+  width: 100px;
+}
 
 /* left side */
 .a-left{
@@ -21,8 +24,8 @@
 }
 
 .a-left > img {
-  width: 4rem;
-  height: 4rem;
+  width: 23rem;
+  height: 4.5rem;
 }
 
 .Webname > h1 {

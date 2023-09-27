@@ -106,7 +106,7 @@ useEffect(()=> {
                           "defaultProfile.png"
                     }
                     alt="Profile"
-                    className="followerImage"
+                    className="followerImage_load"
                     style={{ width: "50px", height: "50px" }}
                   />
                   <div className="name" style={{ fontSize: "0.9rem" }}>

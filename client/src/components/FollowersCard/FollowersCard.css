@@ -13,8 +13,8 @@
     align-items: center;
     background-color: white;
     padding: 20px;
-    min-height: 1vh;
-    min-width: 1vh;
+    min-height: 20vh;
+    min-width: 15vh;
     border-radius: 20px;
 }
 .Suggestions{

@@ -4,8 +4,6 @@ import { UilSearch } from '@iconscout/react-unicons'
 const LogoSearch = () => {
   return (
     <div>
-      <div>
-    </div>
     <div className="LogoSearch">
       <div className="Search">
           <input type="text" placeholder="#Explore"/>

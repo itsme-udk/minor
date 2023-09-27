@@ -12,7 +12,7 @@
 
 .NavIcon-cont{
   background-color: white;
-  width: 450px;
+  width: 150px;
   height: 50px;
   margin-right: 30px;
   border-radius: 50px;
@@ -20,8 +20,8 @@
 .navIcons{
   margin-top: 13px;
   display: flex;
-  margin-left:20px;
-  margin-right: 20px;
+  margin-left:0;
+  margin-right: 35px;
   justify-content: space-between;
 }
 
@@ -47,7 +47,7 @@
   padding-left: 10px;
 }
 .Logoicon{
-  height: 50px;
+  height: 40px;
 }
 .App {
   overflow: hidden;
