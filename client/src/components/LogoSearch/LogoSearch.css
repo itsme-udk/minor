@@ -6,7 +6,6 @@
   display: flex;
   background-color: var(--inputColor);
   border-radius: 10px;
-  padding: 5px;
 }
 .Search>input {
   background-color: transparent;
@@ -21,4 +20,9 @@
   border-radius: 5px;
   padding: 4px;
   color: white;
+}
+
+
+.Logo{
+  height: 50px;
 }
