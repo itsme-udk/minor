@@ -8,28 +8,55 @@
   --cardColor: #E6E6FA;
   --buttonBg: linear-gradient(98.63deg, #a05bfa 0%, #3d008d 100%);
   --inputColor: rgba(40, 52, 62, 0.07);
-  --photo: #4CB256;
-  --video: #4A4EB7;
-  --location: #EF5757;
---shedule: #E1AE4A;
 }
 
+.NavIcon-cont{
+  background-color: white;
+  width: 450px;
+  height: 50px;
+  margin-right: 30px;
+  border-radius: 50px;
+}
+.navIcons{
+  margin-top: 13px;
+  display: flex;
+  margin-left:20px;
+  margin-right: 20px;
+  justify-content: space-between;
+}
+
+.navIcons>a>img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navIcons>img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.navIcons>img:hover{
+  cursor: pointer;
+}
+.Navbar{
+  background-color: #3d008d;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.Logoicon{
+  height: 50px;
+}
 .App {
   overflow: hidden;
   color: var(--black);
   background: #f3f3f3;
-  padding: 1rem 1rem;
 }
 
 /* blur */
-.blur {
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #a6ddf0;
-  filter: blur(72px);
-}
+
 
 .button {
   display: flex;

@@ -1,0 +1,23 @@
+.follower_loader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follower_loader>div{
+    display: flex;
+    gap: 10px;
+}
+
+.followerImage_load{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.name_loader{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}

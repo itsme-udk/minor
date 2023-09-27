@@ -19,16 +19,16 @@ const FollowersCard = ({ location }) => {
 
   return (
     <div className="FollowersCard">
-      <h3>People you may know</h3>
-
+      <div className="searchbar">
+        <input className='Search' type="Text" placeholder="Search People"></input>
+      </div>
+      <h3 className="Sugg-head">People you may know</h3>
+      <div className="Suggestions">
       {persons.map((person, id) => {
         if (person._id !== user._id) return <User person={person} key={id} />;
       })}
-      {!location ? (
-        <span onClick={() => setModalOpened(true)}>Show more</span>
-      ) : (
-        ""
-      )}
+      </div>
+      
 
       <FollowersModal
         modalOpened={modalOpened}

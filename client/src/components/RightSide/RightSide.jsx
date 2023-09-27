@@ -8,7 +8,7 @@ const RightSide = () => {
 
   return (
     <div className="RightSide">
-      <NavIcons/>
+      
     </div>
   );
 };

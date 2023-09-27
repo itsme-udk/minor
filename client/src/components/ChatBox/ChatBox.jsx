@@ -95,7 +95,7 @@ useEffect(()=> {
           <>
             {/* chat-header */}
             <div className="chat-header">
-              <div className="follower">
+              <div className="follower_loader">
                 <div>
                   <img
                     src={
