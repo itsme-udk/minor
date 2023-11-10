@@ -31,7 +31,13 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
+.chat-logo{
+    position: absolute;
+    top: 47%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+}
 .message>span:nth-child(2){
     font-size: 0.7rem;
     color: var(--textColor);

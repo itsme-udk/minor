@@ -5,7 +5,7 @@ import { getUser } from "../../api/UserRequests";
 import "./ChatBox.css";
 import { format } from "timeago.js";
 import InputEmoji from 'react-input-emoji'
-
+import logo from "../../img/LogoName.png"
 const ChatBox = ({ chat, currentUser, setSendMessage,  receivedMessage }) => {
   const [userData, setUserData] = useState(null);
   const [messages, setMessages] = useState([]);
@@ -91,6 +91,7 @@ useEffect(()=> {
   return (
     <>
       <div className="ChatBox-container">
+        <img src={logo} className="chat-logo"/>
         {chat ? (
           <>
             {/* chat-header */}
@@ -126,6 +127,7 @@ useEffect(()=> {
             </div>
             {/* chat-body */}
             <div className="chat-body" >
+              
               {messages.map((message) => (
                 <>
                   <div ref={scroll}
