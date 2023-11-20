@@ -12,13 +12,17 @@
   align-items: center;
   justify-content: center;
 }
-
+.Auth > div > form {
+  height: 720px;
+  width:450px;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .Logos{
-  height: 50px;
-  width: 100px;
+  height: 45px;
+  padding-left: 10px;
 }
 
-/* left side */
 .a-left{
     gap: 2rem;
 }

@@ -50,18 +50,9 @@ const Auth = () => {
 
   return (
     <div className="Auth">
-      {/* left side */}
-
-      <div className="a-left">
-        <img className='Logos' src={Logo} alt="" />
-
-        
-      </div>
-
-      {/* right form side */}
-
       <div className="a-right">
         <form className="infoForm authForm" onSubmit={handleSubmit}>
+          <img className='Logos' src={Logo} alt="" />
           <h3>{isSignUp ? "Register" : "Login"}</h3>
           {isSignUp && (
             <div>
