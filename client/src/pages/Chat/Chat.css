@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 22% auto;
   gap: 1rem;
+  padding: 1rem 1rem;
 }
 
 .Left-side-chat {
@@ -35,7 +36,7 @@
   gap: 1rem;
 }
 .conversation:hover {
-  background: #80808038;
+  background: #cdb4ff;
   cursor: pointer;
 }
 

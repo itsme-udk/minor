@@ -5,7 +5,8 @@ import Auth from "./pages/Auth/Auth";
 import Profile from "./pages/Profile/Profile";
 import { useSelector } from "react-redux";
 import Chat from "./pages/Chat/Chat";
-
+import Logo from './img/LogoName.png';
+import NavIcons from "./components/NavIcons/NavIcons";
 function App() {
   const user = useSelector((state) => state.authReducer.authData);
   return (
@@ -18,8 +19,14 @@ function App() {
             : "auto",
       }}
     >
-      <div className="blur" style={{ top: "-18%", right: "0" }}></div>
-      <div className="blur" style={{ top: "36%", left: "-8rem" }}></div>
+      {user && (
+        <div className="Navbar">
+          <img className="Logoicon" src={Logo} alt="Logo" />
+          <ul className="NavIcon-cont">
+            <NavIcons />
+          </ul>
+        </div>
+      )}
       <Routes>
         <Route
           path="/"

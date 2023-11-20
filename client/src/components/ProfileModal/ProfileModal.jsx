@@ -95,32 +95,23 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
           />
         </div>
 
-        <div>
-          <input
-            value={formData.worksAt}
-            onChange={handleChange}
-            type="text"
-            placeholder="Works at"
-            name="worksAt"
-            className="infoInput"
-          />
-        </div>
+        
 
         <div>
           <input
             value={formData.livesIn}
             onChange={handleChange}
             type="text"
-            placeholder="Lives in"
-            name="livesIn"
+            placeholder="College"
+            name="college"
             className="infoInput"
           />
           <input
             value={formData.country}
             onChange={handleChange}
             type="text"
-            placeholder="Country"
-            name="country"
+            placeholder="Year"
+            name="year"
             className="infoInput"
           />
         </div>
@@ -131,8 +122,8 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             onChange={handleChange}
             type="text"
             className="infoInput"
-            placeholder="Relationship status"
-            name="relationship"
+            placeholder="Tags"
+            name="tags"
           />
         </div>
 

@@ -5,21 +5,14 @@ import ProfileModal from "../ProfileModal/ProfileModal";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import * as UserApi from "../../api/UserRequests.js";
-import { logout } from "../../actions/AuthActions";
+
 
 const InfoCard = () => {
-  const dispatch = useDispatch()
   const params = useParams();
   const [modalOpened, setModalOpened] = useState(false);
   const profileUserId = params.id;
   const [profileUser, setProfileUser] = useState({});
   const { user } = useSelector((state) => state.authReducer.authData);
-
-
-  const handleLogOut = ()=> {
-    dispatch(logout())
-  }
-
 
   useEffect(() => {
     const fetchProfileUser = async () => {
@@ -60,24 +53,24 @@ const InfoCard = () => {
       <div className="info">
         {/* */}
         <span>
-          <b>Status </b>
+          <b>College</b>
         </span>
-        <span>{profileUser.relationship}</span>
+        <span>{profileUser.college}</span>
       </div>
       <div className="info">
         <span>
-          <b>Lives in </b>
+          <b>Year</b>
         </span>
-        <span>{profileUser.livesIn}</span>
+        <span>{profileUser.year}</span>
       </div>
       <div className="info">
         <span>
-          <b>Works at </b>
+          <b>Tags</b>
         </span>
-        <span>{profileUser.worksAt}</span>
+        <span>{profileUser.tags}</span>
       </div>
 
-      <button className="button logout-button" onClick={handleLogOut}>Log Out</button>
+      
     </div>
   );
 };

@@ -4,6 +4,7 @@
     background-color: var(--cardColor);
     padding: 1rem;
     border-radius: 1rem;
+    height:50vh;
 }
 
 
@@ -18,7 +19,15 @@
     width: 90%;
     gap: 1rem;
 }
-
+.searchbar{
+    display: flex;
+    justify-content: center;
+}
+.Search{
+    width: 700px;
+    height: 40px;
+    background-color: white;
+}
 .PostShare>div>input{
     background-color: var(--inputColor);
     border-radius: 10px;
@@ -29,7 +38,9 @@
 }
 
 
-
+.Sugg-head{
+    font-size: xx-large;
+}
 
 
 .postOptions{

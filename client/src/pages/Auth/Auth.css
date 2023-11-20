@@ -12,17 +12,24 @@
   align-items: center;
   justify-content: center;
 }
+.Auth > div > form {
+  height: 720px;
+  width:450px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Logos{
+  height: 45px;
+  padding-left: 10px;
+}
 
-
-
-/* left side */
 .a-left{
     gap: 2rem;
 }
 
 .a-left > img {
-  width: 4rem;
-  height: 4rem;
+  width: 23rem;
+  height: 4.5rem;
 }
 
 .Webname > h1 {

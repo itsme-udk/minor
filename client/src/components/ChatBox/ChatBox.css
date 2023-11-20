@@ -2,7 +2,7 @@
     background: var(--cardColor);
     border-radius: 1rem;
     display: grid;
-    grid-template-rows: 14vh 60vh 13vh;
+    grid-template-rows: 11vh 60vh 13vh;
 }
 
 .chat-header {
@@ -31,7 +31,13 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
+.chat-logo{
+    position: absolute;
+    top: 47%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+}
 .message>span:nth-child(2){
     font-size: 0.7rem;
     color: var(--textColor);
@@ -41,7 +47,7 @@
 .own {
   align-self: flex-end;
   border-radius: 1rem 1rem 0 1rem;
-  background: linear-gradient(98.63deg, #24e4f0 0%, #358ff9 100%);
+  background: linear-gradient(98.63deg, #da7eff 0%, #993f83 100%);
 }
 
 
@@ -80,4 +86,31 @@
 .chat-sender>div{
     height: 70%;
     padding: 0px 15px 0px 15px;
+}
+
+
+
+.follower_loader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.follower_loader>div{
+    display: flex;
+    gap: 10px;
+}
+
+
+.followerImage_load{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.name_loader{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
