@@ -103,7 +103,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             onChange={handleChange}
             type="text"
             placeholder="College"
-            name="college"
+            name="livesIn"
             className="infoInput"
           />
           <input
@@ -111,7 +111,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             onChange={handleChange}
             type="text"
             placeholder="Year"
-            name="year"
+            name="country"
             className="infoInput"
           />
         </div>
@@ -123,7 +123,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
             type="text"
             className="infoInput"
             placeholder="Tags"
-            name="tags"
+            name="relationship"
           />
         </div>
 

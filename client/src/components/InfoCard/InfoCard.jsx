@@ -55,19 +55,19 @@ const InfoCard = () => {
         <span>
           <b>College</b>
         </span>
-        <span>{profileUser.college}</span>
+        <span>{profileUser.livesIn}</span>
       </div>
       <div className="info">
         <span>
           <b>Year</b>
         </span>
-        <span>{profileUser.year}</span>
+        <span>{profileUser.country}</span>
       </div>
       <div className="info">
         <span>
           <b>Tags</b>
         </span>
-        <span>{profileUser.tags}</span>
+        <span>{profileUser.relationship}</span>
       </div>
 
       

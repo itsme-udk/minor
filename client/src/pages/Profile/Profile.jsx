@@ -6,12 +6,16 @@ import RightSide from "../../components/RightSide/RightSide";
 import "./Profile.css";
 const Profile = () => {
   return (
-    <div className="Profile">
-      <ProfileLeft />
+    
       <div className="Profile-center">
+        <div className="pro">
+      <ProfileCard/>
+      </div>
+        <ProfileLeft />
         
       </div>
-    </div>
+     
+    
   );
 };
 
