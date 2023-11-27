@@ -1,22 +1,26 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { followUser, unfollowUser } from "../../actions/UserAction";
+import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
+import { setSelectedUser } from "../../actions/Action";
 const User = ({ person }) => {
   const publicFolder = process.env.REACT_APP_PUBLIC_FOLDER;
   const { user } = useSelector((state) => state.authReducer.authData);
-  const dispatch = useDispatch()
   
-  const [following, setFollowing] = useState(
-    person.followers.includes(user._id)
-  );
-  const handleFollow = () => {
-    following
-      ? dispatch(unfollowUser(person._id, user))
-      : dispatch(followUser(person._id, user));
-    setFollowing((prev) => !prev);
+  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    // Dispatch action to store selected user in Redux store
+    dispatch(setSelectedUser(person));
+
+    // Redirect to the Chat page
+    navigate("/chat");
   };
+  console.log(person)
   return (
-    <div className="follower">
+    <div className="follower" >
       <div>
         <img
           src=
@@ -34,8 +38,7 @@ const User = ({ person }) => {
           <span>@{person.username}</span>
         </div>
       </div>
-      <button className="button fc-button">Start Chat
-      </button>
+        <button className="button fc-button" onClick={handleButtonClick}>Start Chat</button>
     </div>
   );
 };

@@ -13,13 +13,14 @@ const Chat = () => {
   const dispatch = useDispatch();
   const socket = useRef();
   const { user } = useSelector((state) => state.authReducer.authData);
-
+  const selectedUser = useSelector((state) => state.authReducer.selectedUser);
   const [chats, setChats] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [currentChat, setCurrentChat] = useState(null);
   const [sendMessage, setSendMessage] = useState(null);
   const [receivedMessage, setReceivedMessage] = useState(null);
   // Get the chat in chat section
+  
   useEffect(() => {
     const getChats = async () => {
       try {
@@ -57,18 +58,18 @@ const Chat = () => {
 
     );
   }, []);
-
-
   const checkOnlineStatus = (chat) => {
     const chatMember = chat.members.find((member) => member !== user._id);
     const online = onlineUsers.find((user) => user.userId === chatMember);
+    console.log(chat)
     return online ? true : false;
   };
 
+  console.log(user)
   return (
     <div className="Chat">
+      <h1>USER ID: {selectedUser}</h1>
       <div className="Left-side-chat">
-        
         <div className="Chat-container">
           <h2>Chats</h2>
           <div className="Chat-list">
