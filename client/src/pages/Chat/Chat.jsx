@@ -8,12 +8,13 @@ import { useEffect } from "react";
 import { userChats } from "../../api/ChatRequests";
 import { useDispatch, useSelector } from "react-redux";
 import { io } from "socket.io-client";
+import { resetSelectedUser } from '../../actions/Action'; // Adjust the path accordingly
 
 const Chat = () => {
   const dispatch = useDispatch();
   const socket = useRef();
   const { user } = useSelector((state) => state.authReducer.authData);
-  const selectedUser = useSelector((state) => state.authReducer.selectedUser);
+  const selectedUser = useSelector((state) => state.IdReducer.selectedUser);
   const [chats, setChats] = useState([]);
   const [onlineUsers, setOnlineUsers] = useState([]);
   const [currentChat, setCurrentChat] = useState(null);
@@ -58,6 +59,28 @@ const Chat = () => {
 
     );
   }, []);
+
+    // Set initial currentChat when selectedUser is available
+    useEffect(() => {
+      if (selectedUser) {
+        // Find the chat corresponding to the selected user
+        const userChat = chats.find((chat) => {
+          const chatMember = chat.members.find((member) => member !== user._id);
+          return chatMember === selectedUser._id;
+        });
+  
+        // Set the initial currentChat
+        setCurrentChat(userChat);
+      }
+    }, [selectedUser, chats, user._id]);
+    
+    useEffect(() => {
+      return () => {
+        // Dispatch an action to reset the selected user
+        dispatch(resetSelectedUser()); // Assuming you have an action to reset the selected user
+      };
+    }, [dispatch]);
+
   const checkOnlineStatus = (chat) => {
     const chatMember = chat.members.find((member) => member !== user._id);
     const online = onlineUsers.find((user) => user.userId === chatMember);
@@ -68,13 +91,13 @@ const Chat = () => {
   console.log(user)
   return (
     <div className="Chat">
-      <h1>USER ID: {selectedUser}</h1>
       <div className="Left-side-chat">
         <div className="Chat-container">
           <h2>Chats</h2>
           <div className="Chat-list">
             {chats.map((chat) => (
               <div
+                key={chat._id}
                 onClick={() => {
                   setCurrentChat(chat);
                 }}
@@ -91,15 +114,15 @@ const Chat = () => {
       </div>
 
       {/* Right Side */}
-
       <div className="Right-side-chat">
-        
-        <ChatBox
-          chat={currentChat}
-          currentUser={user._id}
-          setSendMessage={setSendMessage}
-          receivedMessage={receivedMessage}
-        />
+        {(
+          <ChatBox
+            chat={currentChat}
+            currentUser={user._id}
+            setSendMessage={setSendMessage}
+            receivedMessage={receivedMessage}
+          />
+        )}
       </div>
     </div>
   );
